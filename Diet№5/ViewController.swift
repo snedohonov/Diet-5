@@ -16,45 +16,51 @@ class ViewController: UIViewController {
     
     var nameProuct : String?
     
-
+    var tag = 0
     
-    @IBAction func meatAndFishButton(_ sender: Any) {
-        
-        performSegue(withIdentifier: "meatFish", sender: self)
+    
+    
+    @IBAction func MeatFishButton(_ sender: UIButton) {
+        //performSegue(withIdentifier: "segueForAll", sender: self)
+        tag = 1
         
     }
     
-    
-    @IBAction func soupButton(_ sender: Any) {
+    @IBAction func SoupButton(_ sender: UIButton) {
+        //performSegue(withIdentifier: "segueForAll", sender: self)
+        tag = 2
         
-        performSegue(withIdentifier: "soupSegue", sender: self)
     }
     
-    
-    
-     
-    
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueMeat" {
+            
+            let destinationVC = segue.destination as! ArrayViewController
+            destinationVC.senderTag = tag
+        } else if segue.identifier == "segueSoup" {
+            let destinationVC = segue.destination as! ArrayViewController
+            destinationVC.senderTag = tag
+        }
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib
     
-        
-        
-        
-    }
-   
-    
-   
-    
-   
-        
-    
-    override func didReceiveMemoryWarning() {
-        self.didReceiveMemoryWarning()
-    }
+        }
     
         
     }
+   
+
+        
+    
+
+
+    
+
+
+
+
+
 
 

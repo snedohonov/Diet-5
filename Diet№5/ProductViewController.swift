@@ -12,16 +12,11 @@ import UIKit
 
 class ProductViewController: UIViewController {
    
-    var productHeaderText = ""
-    
-    @IBOutlet weak var productHeaderLabel: UILabel!
-    
   
     override func viewDidLoad() {
         super.viewDidLoad()
    
         
-        productHeaderLabel.text = productHeaderText
     }
     
 

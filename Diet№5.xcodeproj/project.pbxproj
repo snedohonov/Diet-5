@@ -11,13 +11,13 @@
 		7966A9312162727900E558B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966A9302162727900E558B6 /* AppDelegate.swift */; };
 		7966A9332162727900E558B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966A9322162727900E558B6 /* ViewController.swift */; };
 		7966A9362162727A00E558B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7966A9342162727A00E558B6 /* Main.storyboard */; };
-		7966A9382162728800E558B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7966A9372162728800E558B6 /* Assets.xcassets */; };
 		7966A93B2162728800E558B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7966A9392162728800E558B6 /* LaunchScreen.storyboard */; };
 		7966A9462162728800E558B6 /* Diet_5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966A9452162728800E558B6 /* Diet_5Tests.swift */; };
 		7966A9512162728800E558B6 /* Diet_5UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966A9502162728800E558B6 /* Diet_5UITests.swift */; };
 		7966A965216547B600E558B6 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7966A964216547B600E558B6 /* ProductViewController.swift */; };
 		799051C521906B2500F205F0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799051C421906B2500F205F0 /* Product.swift */; };
 		799051C721907A9A00F205F0 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799051C621907A9A00F205F0 /* ProductTableViewCell.swift */; };
+		79EF28F021AC09C5002A4F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79EF28EF21AC09C5002A4F63 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		7966A9302162727900E558B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7966A9322162727900E558B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7966A9352162727A00E558B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7966A9372162728800E558B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7966A93A2162728800E558B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7966A93C2162728800E558B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7966A9412162728800E558B6 /* Diet№5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Diet№5Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +54,7 @@
 		7966A964216547B600E558B6 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		799051C421906B2500F205F0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		799051C621907A9A00F205F0 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		79EF28EF21AC09C5002A4F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +112,9 @@
 				795774562190F25E00349C1D /* ArrayViewController.swift */,
 				799051C621907A9A00F205F0 /* ProductTableViewCell.swift */,
 				799051C421906B2500F205F0 /* Product.swift */,
-				7966A9372162728800E558B6 /* Assets.xcassets */,
 				7966A9392162728800E558B6 /* LaunchScreen.storyboard */,
 				7966A93C2162728800E558B6 /* Info.plist */,
+				79EF28EF21AC09C5002A4F63 /* Assets.xcassets */,
 			);
 			path = "Diet№5";
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7966A93B2162728800E558B6 /* LaunchScreen.storyboard in Resources */,
-				7966A9382162728800E558B6 /* Assets.xcassets in Resources */,
+				79EF28F021AC09C5002A4F63 /* Assets.xcassets in Resources */,
 				7966A9362162727A00E558B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

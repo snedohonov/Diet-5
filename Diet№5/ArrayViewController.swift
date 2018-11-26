@@ -9,12 +9,18 @@
 import UIKit
 
 class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
+   
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageHeader: UIImageView!
     
     var filteredProducts = [Product]()
     var searchController = UISearchController(searchResultsController: nil)
     var resultsController = UISearchController()
+    var senderTag = 0
+
+
+        
     
     var products = [
         Product(name: "Говядина (не жирная)", type: "мясо", allow: "allow", disallow: "disallow"),
@@ -24,7 +30,7 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         Product(name: "Индейка (без шкуры)", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Плов с нежирным мясом", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Молочные сосиски(ограниченно)", type: "мясо", allow: "allow", disallow: "disallow"),
-        Product(name: "Креветки(ограничнно)", type: "мясо", allow: "allow", disallow: "disallow"),
+        Product(name: "Креветки(ограниченно)", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Кальмары(ограниченно)", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Мидии(ограниченно)", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Пельмени с телятиной", type: "мясо", allow: "allow", disallow: "disallow"),
@@ -121,11 +127,28 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
-    
+    func checkSenderTag(valueOfTag: Int) {
+        
+        if valueOfTag == 1 {
+            self.imageHeader.image = UIImage(named: "MeatFish3")
+        } else if valueOfTag == 2 {
+           self.imageHeader.image = UIImage(named: "Soups")
+        }else if valueOfTag == 3 {
+            
+        }else if valueOfTag == 4 {
+            
+        }else if valueOfTag == 5 {
+            
+        }else if valueOfTag == 6 {
+            
+        }else if valueOfTag == 7 {
+            
+        }
+    }
     
     override func viewDidLoad() {
     
+        
         super.viewDidLoad()
         
         
@@ -137,11 +160,20 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         
+        //searchBar design view
+        searchController.searchBar.barTintColor = UIColor.white
+        searchController.searchBar.layer.borderWidth = 0
+        searchController.searchBar.layer.cornerRadius = 1.0
+        searchController.searchBar.clipsToBounds = true
         
+        searchController.searchBar.searchBarStyle = .prominent
 
         
-    }
+        checkSenderTag(valueOfTag: senderTag)
+        }
+    
+    
 }
     
-    
+
 
