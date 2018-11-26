@@ -10,7 +10,6 @@ import UIKit
 
 class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchResultsUpdating {
    
-    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageHeader: UIImageView!
     
@@ -18,9 +17,6 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var searchController = UISearchController(searchResultsController: nil)
     var resultsController = UISearchController()
     var senderTag = 0
-
-
-        
     
     var products = [
         Product(name: "Говядина (не жирная)", type: "мясо", allow: "allow", disallow: "disallow"),
@@ -42,7 +38,6 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         Product(name: "Голубцы", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Треска отварная или запеченая", type: "мясо", allow: "allow", disallow: "disallow"),
         Product(name: "Тунец отварной или запеченый", type: "мясо", allow: "allow", disallow: "disallow"),
-        
         Product(name: "Ветчина", type: "мясо", allow: "disallow", disallow: "allow"),
         Product(name: "Колбаса", type: "мясо", allow: "disallow", disallow: "allow"),
         Product(name: "Говядина (жирная)", type: "мясо", allow: "disallow", disallow: "allow"),
@@ -65,24 +60,52 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         Product(name: "Печень", type: "мясо", allow: "disallow", disallow: "allow"),
         ]
     
+    var soups = [
+        Product(name: "Овощной суп", type: "суп", allow: "allow", disallow: "disallow"),
+        Product(name: "Грибной суп", type: "суп", allow: "allow", disallow: "disallow"),
+        Product(name: "Постный борщ", type: "суп", allow: "allow", disallow: "disallow"),
+        Product(name: "Уха не жирная", type: "суп", allow: "allow", disallow: "disallow"),
+        Product(name: "Гречневый суп", type: "суп", allow: "allow", disallow: "disallow"),
+        Product(name: "Щи", type: "суп", allow: "disallow", disallow: "allow"),
+        Product(name: "Рассольник", type: "суп", allow: "disallow", disallow: "allow"),
+    ]
 
+    var porridge = [
+        Product(name: "Гречневая каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Рисова каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Манная каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Плов", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Пшеничная каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Ячневая каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Перловая каша", type: "каша", allow: "allow", disallow: "disallow"),
+        Product(name: "Овсяная каша", type: "каша", allow: "allow", disallow: "disallow"),
+    
+    ]
+    
+    var vegfruit = [
+        Product(name: "Картофель отварной", type: "овощи", allow: "allow", disallow: "disallow")
+    ]
+    var milk = [
+        Product(name: "Сыр голландский", type: "сыр", allow: "allow", disallow: "disallow")
+    ]
+    var bread = [
+        Product(name: "Макароны", type: "мучные изделия", allow: "allow", disallow: "disallow")
+    ]
+    var candy = [
+        Product(name: "Шоколад черный", type: "шоколад", allow: "allow", disallow: "disallow")
+    ]
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() {
             return filteredProducts.count
         }
-        
         return products.count
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ProductTableViewCell
@@ -92,16 +115,12 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         } else {
             product = products[indexPath.row]
         }
-        
-        
         cell.allowImage.image = UIImage(named: product.allow)
         cell.disallowImage.image = UIImage(named: product.disallow)
         cell.nameProductLabel.text = product.name
         
         return cell
     }
-    
-    
     
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
@@ -120,37 +139,37 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.reloadData()
     }
     
-    
-    
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
     
-    
     func checkSenderTag(valueOfTag: Int) {
-        
         if valueOfTag == 1 {
             self.imageHeader.image = UIImage(named: "MeatFish3")
         } else if valueOfTag == 2 {
-           self.imageHeader.image = UIImage(named: "Soups")
-        }else if valueOfTag == 3 {
-            
-        }else if valueOfTag == 4 {
-            
-        }else if valueOfTag == 5 {
-            
-        }else if valueOfTag == 6 {
-            
-        }else if valueOfTag == 7 {
-            
+            self.imageHeader.image = UIImage(named: "Soups")
+            products = soups
+        } else if valueOfTag == 3 {
+            self.imageHeader.image = UIImage(named: "porridge")
+            products = porridge
+        } else if valueOfTag == 4 {
+            self.imageHeader.image = UIImage(named: "FruitsVeg")
+            products = vegfruit
+        } else if valueOfTag == 5 {
+            self.imageHeader.image = UIImage(named: "MilkProd")
+            products = milk
+        } else if valueOfTag == 6 {
+            self.imageHeader.image = UIImage(named: "bread-1")
+            products = bread
+        } else if valueOfTag == 7 {
+            self.imageHeader.image = UIImage(named: "candy")
+            products = candy
         }
     }
     
     override func viewDidLoad() {
     
-        
         super.viewDidLoad()
-        
         
         tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
@@ -165,14 +184,10 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         searchController.searchBar.layer.borderWidth = 0
         searchController.searchBar.layer.cornerRadius = 1.0
         searchController.searchBar.clipsToBounds = true
-        
         searchController.searchBar.searchBarStyle = .prominent
 
-        
         checkSenderTag(valueOfTag: senderTag)
         }
-    
-    
 }
     
 

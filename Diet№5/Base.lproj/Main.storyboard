@@ -42,21 +42,37 @@
                                 <rect key="frame" x="21" y="235" width="333" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="kasha"/>
+                                <connections>
+                                    <action selector="PorridgeButton:" destination="B3I-wA-1xA" eventType="touchUpInside" id="bYg-cl-Von"/>
+                                    <segue destination="hUA-HN-HVc" kind="show" identifier="seguePorridge" id="46q-Ln-zJa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nin-52-jUK" userLabel="Fruits">
                                 <rect key="frame" x="21" y="319" width="333" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="fruit"/>
+                                <connections>
+                                    <action selector="VegFruitButton:" destination="B3I-wA-1xA" eventType="touchUpInside" id="kxf-De-KIG"/>
+                                    <segue destination="hUA-HN-HVc" kind="show" identifier="segueFruit" id="KOy-Pc-FVk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egR-RO-3Do" userLabel="Milk">
                                 <rect key="frame" x="21" y="403" width="333" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Milk"/>
+                                <connections>
+                                    <action selector="MilkButton:" destination="B3I-wA-1xA" eventType="touchUpInside" id="kcP-o5-GOd"/>
+                                    <segue destination="hUA-HN-HVc" kind="show" identifier="segueMilk" id="vgC-76-JJs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zpn-re-S9u" userLabel="Bread">
                                 <rect key="frame" x="21" y="486" width="333" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Bread"/>
+                                <connections>
+                                    <action selector="BreadButton:" destination="B3I-wA-1xA" eventType="touchUpInside" id="opd-e5-khR"/>
+                                    <segue destination="hUA-HN-HVc" kind="show" identifier="segueBread" id="gpf-0D-fkA"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="T0g-im-bMe">
                                 <rect key="frame" x="64" y="-68" width="247" height="145"/>
@@ -66,6 +82,10 @@
                                 <rect key="frame" x="21" y="570" width="333" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sweet"/>
+                                <connections>
+                                    <action selector="CandyButton:" destination="B3I-wA-1xA" eventType="touchUpInside" id="q1T-Gw-Bjy"/>
+                                    <segue destination="hUA-HN-HVc" kind="show" identifier="segueCandy" id="xqc-rz-ITK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aM3-fk-fla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1190" y="-339"/>
+            <point key="canvasLocation" x="-1398" y="-415"/>
         </scene>
         <!--Array View Controller-->
         <scene sceneID="4KQ-oY-vTD">
@@ -88,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Album Info" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-rn-GNL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Album Info" translatesAutoresizingMaskIntoConstraints="NO" id="XqK-rn-GNL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -194,6 +214,6 @@
         <image name="sweet" width="1187" height="304"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mwk-G2-TnF"/>
+        <segue reference="xqc-rz-ITK"/>
     </inferredMetricsTieBreakers>
 </document>
