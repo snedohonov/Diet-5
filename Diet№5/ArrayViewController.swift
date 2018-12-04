@@ -185,7 +185,8 @@ class ArrayViewController: UIViewController, UITableViewDelegate, UITableViewDat
         searchController.searchBar.layer.cornerRadius = 1.0
         searchController.searchBar.clipsToBounds = true
         searchController.searchBar.searchBarStyle = .prominent
-
+        searchController.searchBar.setValue("Отмена", forKey:"_cancelButtonText")
+        UIBarButtonItem.appearance(whenContainedInInstancesOf:[UISearchBar.self]).tintColor = #colorLiteral(red: 0.9254902005, green: 0.291200215, blue: 0.2917755914, alpha: 1)
         checkSenderTag(valueOfTag: senderTag)
         }
 }

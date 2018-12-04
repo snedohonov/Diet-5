@@ -126,7 +126,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название продукта" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4v-fi-LZG">
-                                                    <rect key="frame" x="21" y="7" width="163" height="43"/>
+                                                    <rect key="frame" x="21" y="3" width="163" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -167,7 +167,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Название продукта" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0e-qQ-D9C">
-                                <rect key="frame" x="11" y="210" width="145" height="37"/>
+                                <rect key="frame" x="11" y="209" width="145" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <color key="textColor" red="1" green="0.2821430875261518" blue="0.30833395803278774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,7 +206,7 @@
         <image name="Milk" width="1187" height="304"/>
         <image name="Soup" width="1187" height="304"/>
         <image name="Vector" width="40" height="41"/>
-        <image name="allow" width="39" height="40"/>
+        <image name="allow" width="29" height="30"/>
         <image name="fruit" width="1187" height="304"/>
         <image name="kasha" width="1187" height="304"/>
         <image name="logo" width="1242" height="476"/>
